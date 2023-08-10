@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>BE Mindful</title>
+</head>
+<body>
+    <nav class="bg-cyan-400 md:flex md:items-center md:justify-between p-5">
+        <div class="flex justify-between items-center">
+            
+        <h1 class="text-2xl text-white  tracking-widest"><a href="home.html">BE Mindful</a> </h1>
+        <span class="text-3xl cursor-pointer md:hidden block"> <ion-icon  class="text-white"  onclick="Menu(this)"></ion-icon></span>
+      </div>
+        <ul class="text-white md:flex  md:static absolute bg-cyan-400 w-full left-0 md:w-auto md:opacity-100 opacity-0 transition-all ease-in">
+            <li class="mx-5 my-6 ml-5 md:my-0"><button class="bg-white text-cyan-400 rounded px-5 py-1 hover:text-white hover:bg-cyan-400 hover:transition-all hover:delay-150">
+               
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-20 absolute w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                  </svg>
+                
+                  
+                <a class="ml-7" href="Login.html"> Login </a></button> </li>
+            <li class="mx-5 my-6 md:my-0"><button class="bg-white text-cyan-400 hover:delay-150 rounded px-5 py-1 hover:text-white hover:bg-cyan-400 hover:transition-all">
+               
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+                  </svg>
+                  
+                  
+                  <a class="ml-7" href="Signup.html"> Signup </a></button> </li>
+        </ul>
+      </nav>
+      
+      <script>
+      function Menu(e)
+      {
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close",list.classList.
+        add('top-[60px]') , list.classList.add('opacity-100')
+        ) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+      }
+      </script>
+      <section>
+        <div class="relative items-center">
+        <img class="object-cover h-1/4 " src="pexels-cottonbro-studio-6754009.jpg" alt="">
+        <h1 class="absolute text-6xl text-center text-white bottom-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold tracking-widest">Release Your Stress with BE Mindful</h1>
+        <div class="rounded-xl absolute items-center bottom-0 top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-center ">
+            <div class="text-center ">
+              <button id="openCameraBtn" class="bg-cyan-400 tracking-widest  text-white px-6 py-4 rounded hover:bg-transparent hover:text-cyan-400">
+                Check your Stress
+              </button>
+            </div>
+          
+            <script>
+              const openCameraBtn = document.getElementById('openCameraBtn');
+          
+              openCameraBtn.addEventListener('click', async () => {
+                try {
+                  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                  const videoElement = document.createElement('video');
+                  videoElement.srcObject = stream;
+                  videoElement.play();
+                } catch (error) {
+                  console.error('Error accessing camera:', error);
+                }
+              });
+            </script>
+        </div>
+    </div>
+
+    
+
+      </section>
+</body>
+</html>

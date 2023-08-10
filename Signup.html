@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded shadow-md w-96">
+    <h2 class="text-2xl font-semibold mb-4 text-cyan-400 tracking-widest">Sign Up</h2>
+    <form>
+      <div class="mb-4">
+        <label for="username" class="block text-sm font-medium text-cyan-400 tracking-widest">Username</label>
+        <input type="text" id="username" name="username" class="mt-1 text-cyan-400 px-3 py-2 w-full border rounded-md shadow-sm focus:ring focus:ring-cyan-200 tracking-widest" required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-cyan-400 tracking-widest">Email</label>
+        <input type="email" id="email" name="email" class="mt-1 text-cyan-400 px-3 py-2 w-full border rounded-md shadow-sm focus:ring focus:ring-cyan-200 tracking-widest" required>
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium text-cyan-400 tracking-widest">Password</label>
+        <input type="password" id="password" name="password" class="mt-1 text-cyan-400 px-3 py-2 w-full border rounded-md shadow-sm focus:ring focus:ring-cyan-200 tracking-widest" required>
+      </div>
+      <button type="submit" class="w-full bg-cyan-400 text-white px-4 py-2 rounded hover:bg-white hover:text-cyan-400 focus:outline-none focus:ring focus:ring-blue-200 tracking-widest">Sign Up</button>
+    </form>
+    <p class="mt-4 text-sm text-cyan-400 tracking-widest">Already have an account? <a href="Login.html" class="text-cyan-600 hover:underline tracking-widest">Log in</a></p>
+  </div>
+</body>
+</html>
